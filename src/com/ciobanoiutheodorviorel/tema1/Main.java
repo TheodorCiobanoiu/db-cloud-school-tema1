@@ -43,7 +43,7 @@ public class Main {
                     System.out.println("How much would you like to deposit? ");
                     double currDeposit = in.nextInt();
                     testAccount.get(currAccount).deposit(currDeposit);
-                    interogate(testAccount.get(currAccount));
+                    interrogate(testAccount.get(currAccount));
                     break;
                 case 2:
                     //Case 2: withdraw amount from a given account
@@ -53,7 +53,7 @@ public class Main {
                     System.out.println("How much would you like to withdraw? ");
                     double currWithdraw = in.nextInt();
                     testAccount.get(currAccount).withdraw(currWithdraw);
-                    interogate(testAccount.get(currAccount));
+                    interrogate(testAccount.get(currAccount));
                     break;
                 case 3:
                     //Case 3: Change National Id for a given account
@@ -63,13 +63,13 @@ public class Main {
                     System.out.println("Please state the new National Id: ");
                     String newNationalId = reader.readLine();
                     testAccount.get(currAccount).linkToNationalId(newNationalId);
-                    interogate(testAccount.get(currAccount));
+                    interrogate(testAccount.get(currAccount));
                     break;
                 case 4:
                     //Case 4: Interrogate account (gives National Id and the amount left in the account)
                     System.out.println("What is your account number? ");
                     currAccount = in.nextInt() - 1;
-                    interogate(testAccount.get(currAccount));
+                    interrogate(testAccount.get(currAccount));
                     break;
                 default:
                     break;
@@ -92,7 +92,7 @@ public class Main {
         System.out.println("Press 4 to interogate an account");
         System.out.println("Press 0 to exit");
     }
-    public static void interogate(Account account){
+    public static void interrogate(Account account){
         //Special function to print in console the account interrogation
 
         System.out.println("The National Id of this account: " + account.getNationalId());
