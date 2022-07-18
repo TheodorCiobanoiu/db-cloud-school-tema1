@@ -40,8 +40,8 @@ public class Account {
             //First digit must be either 1, 2 ,5 or 6
             return false;
         }
-        return true;
-        //return checkControlDigit(); // Comment this line and uncomment "return true;" if you don't want to check the Control Digit
+        //return true;
+        return checkControlDigit(); // Comment this line and uncomment "return true;" if you don't want to check the Control Digit
     }
     public boolean checkControlDigit(){
 
